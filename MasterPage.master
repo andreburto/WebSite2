@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+body { margin: 0px; padding: 0px; }
+
+form#form1 {
+    position: absolute; top: 0px; left: 0px;
+    margin: 0px; padding: 0px;
+    background-color: #c0c0c0;
+    height: auto; width: auto;
+}
+
+div#leftMenu {
+    width: 200px; height: 100%;
+    background-color: #c0c0c0;
+    padding:5px; margin:0px;
+    float: left; }
+
+div#leftMenu ul { padding:0px; margin:0px; }
+
+div#leftMenu ul li { padding:0px; margin:0px; }
+
+div#rightMenu {
+    width: 800px; height: 100%;
+    background-color: #e0e0e0;
+    padding: 5px; margin: 0px;
+    float: left;
+}
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="leftMenu">
+        <ul>
+            <li><a href="Write.aspx">Write a Post</a></li>
+            <li><a href="Default.aspx">View Posts</a></li>
+        </ul>
+    </div>
+    <div id="rightMenu">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
